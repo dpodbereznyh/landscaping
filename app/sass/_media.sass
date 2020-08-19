@@ -1,0 +1,206 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+  .answer
+    &__wrap-img
+      display: none
+    &__engener
+      display: none
+  .foot
+    &__top-list
+      li
+        margin-left: 1rem
+        &:first-child
+          margin-left: 0
+    &__top-list-row
+      font-size: 14px
+  .sm-clean a, .sm-clean a:hover, .sm-clean a:focus, .sm-clean a:active, .sm-clean a.highlighted
+    padding: 15px 25px
+  .top-head__wrap-row-text
+    font-size: 12px
+  .main-frame
+    &__wrap-info-title
+      font-size: 28px
+    &__wrap-info-subtitle
+      font-size: 18px
+      span
+        font-size: 40px
+
+// ≥992px
++media-breakpoint-down(md)
+  .accii
+    &__wrap-border-info-title
+      font-size: 14px
+    &__wrap-border-info-price
+      font-size: 22px
+    &__wrap-border-info-price-old
+      font-size: 14px
+  main
+    padding-top: 66px
+  .sticky-top
+    position: fixed
+    width: 100%
+  .main-frame
+    &__wrap-info-title
+      font-size: 22px
+    &__wrap-info-subtitle
+      font-size: 14px
+      span
+        font-size: 30px
+    &__advantages-list
+      margin-bottom: 1rem
+    &__advantages-subitem
+      margin-bottom: 11px
+      p
+        font-size: 16px
+
+  .main-nav
+    display: block
+  .foot
+    &__top-list
+      display: block
+      columns: 2
+      li
+        margin-left: 0
+        margin-bottom: .5rem
+  .foot-map
+    &__wrap
+      position: relative
+      top: auto
+      right: auto
+      transform: translateY( 0 )
+      max-width: 100%
+// ≥768px
++media-breakpoint-down(sm)
+  .main-frame
+    &__wrap
+      position: relative
+      padding: 2rem 0
+    &__wrap-info
+      align-items: center
+    &__wrap-info-title
+      color: $text
+      text-align: center
+      font-size: 22px
+      text-shadow: none
+      margin-bottom: 1rem
+    &__wrap-info-subsubtitle
+      color: $text
+      text-align: center
+      max-width: 100%
+      text-shadow: none
+      font-size: 20px
+    &__wrap-info-subtitle
+      color: $text
+      text-align: center
+      max-width: 100%
+      text-shadow: none
+    &__advantages-subitem
+      p
+        color: #2e2b29
+    &__advantages-list
+      margin-bottom: 2rem
+  .foot
+    &__top
+      flex-direction: column
+      align-items: flex-start
+    &__top-logo
+      margin-right: 0
+      margin-bottom: 2rem
+    &__bottom
+      flex-direction: column
+      align-items: flex-start
+    &__bottom-left
+      margin-bottom: 1rem
+    &__bottom-center
+      padding: 0
+      margin-bottom: 1rem
+    &__bottom-right
+      text-align: left
+  .present
+    padding: 3rem 0
+    &__info
+      align-items: center
+      text-align: center
+
+// ≥576px
++media-breakpoint-down(xs)
+  .main-frame__advantages-list
+    flex-direction: column
+  .main-frame__advantages-subitem
+    &:last-child
+      margin-bottom: 11px
+  .accii
+    &__wrap-border-info
+      padding: .5rem
+    &__wrap-border-info-title
+      font-size: 12px
+    &__wrap-border-info-price
+      font-size: 18px
+    &__wrap-border-info-price-old
+      font-size: 12px
+  .foot-map
+    &__wrap
+      padding: 1.5rem 2rem
+  .answer
+    &__wrap
+      padding: 3rem 1.5rem
+    &-form-btn
+      flex-direction: column
+      align-items: flex-start
+      button
+        margin-right: 0
+        width: 100%
+        margin-bottom: 1rem
+  .main-title
+    font-size: 24px
+  .main-form-title
+    font-size: 24px
+  .buy__row_price
+    font-size: 16px
+    span
+      font-size: 26px
+  .var__wrap-info
+    padding: 1rem
+    padding-bottom: 2rem
+
+  .present
+    &__info-title
+      font-size: 30px
+  .about
+    &__content
+      text-align: justify
+      ul
+        li
+          text-align: left
+  .club
+    &__content
+      text-align: justify
+  .var
+    &__wrap-info a
+      padding: .5rem 1rem
+    &__wrap-info-title
+      font-size: 26px
+    &__wrap-info-subtitle
+      font-size: 12px
+      margin-bottom: 1rem
+  .answer__wrap-info-title
+    font-size: 24px
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

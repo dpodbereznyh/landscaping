@@ -1,0 +1,1010 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "../libs/bootstrap/scss/bootstrap.scss"
+@import "../libs/fancybox/jquery.fancybox.min.css"
+@import "../libs/menu/sm-core-css.css"
+@import "../libs/menu/sm-clean.css"
+::placeholder
+	color: #666
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.top-head
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 1.5rem 0
+	&__wrap-row
+		display: flex
+		align-items: center
+	&__wrap-row-img
+		margin-right: .5rem
+	&__wrap-row-text
+		line-height: 130%
+	&__wrap-phone
+		font-size: 28px
+		color: #403E3D
+		transition: .35s
+		&-accent
+			color: $accent
+		&:hover
+			color: $accent
+			text-decoration: none
+
+.sticky-top
+	position: sticky
+	top: 0
+	z-index: 1020
+
+.main-frame
+	position: relative
+	&__wrap
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		.container-fluid
+			height: 100%
+	&__wrap-info
+		height: 100%
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: center
+	&__wrap-info-bgtitle
+		font-family: "Asket"
+		font-weight: 800
+		font-size: 26px
+		line-height: 170%
+		text-transform: uppercase
+		color: #2E2B29
+		padding: .5rem 1rem
+		background: rgba(#FFF, .5)
+		border-radius: 2px
+	&__wrap-info-title
+		font-family: "Asket"
+		font-weight: 800
+		font-size: 54px
+		line-height: 160%
+		text-transform: uppercase
+		color: #FFFFFF
+		text-shadow: 6px 5px 10px rgba(26, 26, 26, 0.5)
+		margin-bottom: 2rem
+	&__wrap-info-subsubtitle
+		font-weight: 500
+		font-size: 24px
+		line-height: 140%
+		color: #FFFFFF
+		text-shadow: 6px 5px 10px rgba(26, 26, 26, 0.5)
+		margin-bottom: 1rem
+	&__wrap-info-subtitle
+		font-family: AsketNarrow
+		font-style: normal
+		font-weight: normal
+		font-size: 34px
+		line-height: 160%
+		color: #FFFFFF
+		text-shadow: 6px 5px 10px rgba(26, 26, 26, 0.5)
+		margin-bottom: 2rem
+		max-width: 50%
+		span
+			font-size: 54px
+	&__advantages-list
+		padding: 0
+		display: flex
+		list-style: none
+		margin-bottom: 2rem
+	&__advantages-subitem
+		margin-right: 20px
+	&__advantages-sublist
+		padding: 0
+		list-style: none
+	&__advantages-subitem
+		display: flex
+		align-items: center
+		margin-bottom: 19px
+		&:last-child
+			margin-bottom: 0
+		p
+			margin: 0
+			text-shadow: 6px 5px 10px rgba(26, 26, 26, 0.5)
+			font-family: Roboto
+			font-style: normal
+			font-weight: 500
+			font-size: 20px
+			line-height: 140%
+			color: #fff
+		span
+			width: 16px
+			height: 16px
+			border: 1px solid #346832
+			border-radius: 50%
+			position: relative
+			margin-right: 7px
+			&:after
+				content: ""
+				position: absolute
+				display: block
+				width: 8px
+				height: 8px
+				border-radius: 50%
+				background: #2CB027
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+	.cmn-btn
+		padding: 1rem 2rem
+
+.accii
+	margin-bottom: 3rem
+	padding: 0 15px
+	&__wrap
+		position: relative
+		overflow: hidden
+		display: block
+		color: $text
+		&:hover
+
+	&__wrap-border
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate( -50%, -50% )
+		width: 80%
+		z-index: 100
+		background: rgba(255, 255, 255, 0.8)
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		padding: 1rem
+	&__wrap-border-info
+		width: 100%
+		height: 100%
+		border: 3px solid #5DB55A
+		box-sizing: border-box
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		padding: 1rem
+		color: $text
+		&:hover
+			text-decoration: none
+			color: $text
+			.accii__wrap-border-info-title
+				opacity: 0
+			.accii__wrap-border-info-price
+				opacity: 0
+			.accii__wrap-border-info-btn
+				opacity: 1
+	&__wrap-border-info-title
+		font-weight: bold
+		font-size: 20px
+		line-height: 140%
+		text-align: center
+		margin-bottom: .3rem
+		transition: .35s
+	&__wrap-border-info-price
+		font-weight: bold
+		font-size: 28px
+		line-height: 140%
+		transition: .35s
+	&__wrap-border-info-price-old
+		font-weight: 500
+		font-size: 18px
+		line-height: 140%
+		text-decoration: line-through
+		vertical-align: super
+	&__wrap-border-info-btn
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate( -50%, -50% )
+		padding: .8rem 3rem!important
+		opacity: 0
+		transition: .5s
+.pluses
+	margin: 3rem 0
+	&__wrap
+		display: flex
+		flex-direction: column
+		align-items: center
+		height: 100%
+	&__wrap-img
+		margin-bottom: 1rem
+		img
+			height: 90px
+			width: auto
+	&__wrap-title
+		font-size: 18px
+		font-weight: 500
+		text-align: center
+
+.var
+	margin-bottom: 3rem
+	&__wrap
+		width: 100%
+	&__wrap-info
+		//position: absolute
+		//top: 0
+		//left: 0
+		width: 100%
+		height: 100%
+		padding: 4rem
+		padding-bottom: 6rem
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: center
+	&__wrap-info-title
+		font-weight: bold
+		font-size: 32px
+		line-height: 37px
+		color: #FFFFFF
+		margin-bottom: 2rem
+	&__wrap-info-subtitle
+		font-weight: 500
+		font-size: 20px
+		line-height: 140%
+		color: #FFFFFF
+		margin-bottom: 2rem
+.swiper-slide-active
+
+.swiper-slide-prev
+
+.swiper-slide-next
+
+.projects
+	margin-bottom: 3rem
+	&__slider
+		position: relative
+	&__swiper-slide_description
+		font-family: Roboto
+		font-style: normal
+		font-weight: normal
+		font-size: 18px
+		line-height: 200%
+		margin-top: 21px
+		text-align: center
+	&__swiper-container
+		width: 100%
+		height: 100%
+	&__swiper-wrapper
+	&__swiper-slide
+		width: 1038px!important
+		img
+			max-width: 100%
+			width: 100%
+			height: auto
+			display: inline-block
+
+
+	&__swiper-pagination
+
+	&__swiper-button-prev
+		z-index: 3
+		width: 41px
+		height: 100px
+		background: #2E2B29
+		position: absolute
+		left: 0
+		top: 50%
+		transform: translate(0, -50%)
+		display: flex
+		align-items: center
+		justify-content: center
+		transition: .35s
+		&:hover
+			background: #fff
+			transition: .35s
+			outline: none
+		&:hover .icon-prev-arrow:before
+			color: #2CB027
+			transition: .35s
+		.icon-prev-arrow
+			font-size: 34px
+			transition: all 0.35s ease
+			&:before
+				font-family: iconmoon
+				content: "\e900"
+				color: #fff
+	&__swiper-button-next
+		z-index: 3
+		width: 41px
+		height: 100px
+		background: #2E2B29
+		position: absolute
+		right: 0
+		top: 50%
+		transform: translate(0, -50%)
+		display: flex
+		align-items: center
+		justify-content: center
+		cursor: pointer
+		transition: .35s
+		outline: none
+		&:hover
+			background: #fff
+			transition: .35s
+			outline: none
+		&:hover .icon-next-arrow:before
+			color: #2CB027
+			transition: .35s
+		.icon-next-arrow
+			font-size: 34px
+			transition: all 0.35s ease
+			&:before
+				font-family: iconmoon
+				content: "\e901"
+				color: #fff
+			&:hover:before
+				color: #2CB027
+				transition: all 0.35s ease
+
+
+.present
+	background-image: url(../img/present-bg.jpg)
+	padding: 5rem 0
+	margin: 3rem 0
+	margin-bottom: 5rem
+	&__info
+		height: 100%
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: center
+		color: #fff
+	&__info-title
+		font-family: "Asket"
+		font-style: normal
+		font-weight: 800
+		font-size: 42px
+		line-height: 42px
+		margin-bottom: 1rem
+	&__info-subtitle
+		font-family: Roboto, sans-serif
+		font-style: normal
+		font-weight: 500
+		font-size: 32px
+		line-height: 150%
+		margin-bottom: 2rem
+	&__price_new
+		font-size: 52px
+		line-height: 150%
+		text-shadow: 5px 4px 10px rgba(63, 63, 63, 0.6)
+	&__price_old
+		text-decoration: line-through
+		font-family: Roboto, sans-serif
+		font-style: normal
+		font-weight: normal
+		font-size: 24px
+		line-height: 150%
+		color: #DFDFDF
+		text-shadow: 5px 4px 10px rgba(63, 63, 63, 0.6)
+		vertical-align: top
+	&__info-text
+		font-size: 20px
+		line-height: 200%
+		margin-bottom: 2rem
+	.cmn-btn
+		padding: 1rem 2rem
+
+.etap
+	margin: 3rem 0
+	padding: 5rem 0 3rem 0
+	background-color: $text
+	&__wrap
+		display: flex
+	&__wrap-count
+		position: relative
+		display: inline-table
+		margin-right: 5px
+	&__wrap-count-img
+	&__wrap-count-text
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate( -50%, -50% )
+		font-weight: 500
+		font-size: 20px
+		line-height: 23px
+		text-transform: uppercase
+		color: #FFFFFF
+	&__wrap-text
+		font-style: normal
+		font-weight: 500
+		font-size: 18px
+		line-height: 21px
+		color: #fff
+
+.about
+	margin: 3rem 0
+	&__content
+		font-size: 18px
+		line-height: 200%
+		ul
+			list-style: none
+			margin: 0
+			padding-left: 16px
+			li
+				position: relative
+				&::before
+					content: ''
+					position: absolute
+					top: 16px
+					left: -16px
+					width: 6px
+					height: 6px
+					background-color: $accent
+					border-radius: 50%
+
+.main-form
+	background-color: #2E2B29
+	margin-bottom: 3rem
+	#main-form
+		padding: 5rem 0 3rem 0
+	&-title
+		text-align: center
+		font-family: "Asket"
+		font-size: 34px
+		line-height: 34px
+		text-transform: uppercase
+		color: #FFFFFF
+		margin-bottom: 1rem
+	&-subtitle
+		text-align: center
+		font-weight: 500
+		font-size: 20px
+		line-height: 140%
+		color: #969696
+		margin-bottom: 3rem
+	&__wrap
+		display: flex
+		flex-direction: column
+		margin-bottom: 2rem
+	&__wrap-label
+		font-weight: bold
+		font-size: 18px
+		line-height: 21px
+		color: #FFFFFF
+		margin-bottom: 1rem
+	&__wrap-row
+		display: flex
+		align-items: center
+	.cmn-btn
+		padding: 1rem 2rem
+
+.club
+	&__content p
+		font-size: 18px
+		line-height: 200%
+		margin-bottom: 2rem
+.advice
+	margin-bottom: 3rem
+	&__bg
+		width: 100%
+		img
+			max-width: 100%
+			width: 100%
+			height: auto
+			display: inline-block
+
+.answer
+	margin: 3rem 0
+	&__list
+		padding: 0
+		list-style: none
+	&__item
+		display: flex
+		align-items: center
+		margin-bottom: 12px
+		p
+			font-family: Roboto
+			font-style: normal
+			font-weight: 500
+			font-size: 20px
+			line-height: 140%
+			color: #969696
+			margin: 0
+		span
+			min-width: 16px
+			height: 16px
+			border: 1px solid #346832
+			border-radius: 50%
+			position: relative
+			margin-right: 7px
+			&:after
+				content: ""
+				position: absolute
+				display: block
+				width: 8px
+				height: 8px
+				border-radius: 50%
+				background: #2CB027
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+	&-border
+		position: relative
+		border-radius: 2px
+		padding: 10px
+		background: linear-gradient( to right, #89DF86 0%, #488D45 76.56%)
+	&__wrap
+		padding: 5rem 4rem
+		background-color: #FFF
+
+	&__wrap-info
+		display: flex
+		flex-direction: column
+	&__wrap-info-title
+		font-family: "Asket"
+		font-size: 34px
+		font-weight: 800
+		font-size: 34px
+		line-height: 34px
+		text-transform: uppercase
+		margin-bottom: 1.5rem
+	&__wrap-info-subtitle
+		font-weight: 500
+		font-size: 20px
+		color: #969696
+		margin-bottom: 2.6rem
+	&__wrap-img
+		position: absolute
+		left: 50%
+		top: 0
+		transform: translate(-50%,-60px)
+		width: 297px
+	&__wrap_label
+		display: flex
+		flex-direction: column
+		margin-bottom: 1.5rem
+	&__manager_image
+		width: fit-content
+		margin-bottom: 10px
+		img
+			width: 254px
+			height: auto
+			display: inline-block
+	&__manager_post
+		font-style: normal
+		font-weight: 300
+		font-size: 16px
+		color: #2E2B29
+		margin-bottom: 0!important
+	&__manager_name
+		font-style: italic
+		font-weight: 500
+		font-size: 18px
+		color: #2E2B29
+		margin-bottom: 0!important
+	&-form-input
+		margin-bottom: 2rem
+	&-form-btn
+		display: flex
+		align-items: center
+		button
+			margin-right: 1.5rem
+	&-form-btn-text
+		color: #969696
+		line-height: 130%
+	&-form-btn-text-link
+		color: $accent
+		&:hover
+			color: $accent
+	.cmn-btn
+		padding: 1rem 2rem
+
+.main-form-input
+	background-color: #FFFFFF
+	border-radius: 2px
+	width: 140px
+	border: none
+	padding: .2rem 2rem
+	background-image: url(../img/main-form-size.svg)
+	background-repeat: no-repeat
+	background-position: 10px center
+	margin-right: 1rem
+	&::placeholder
+		font-size: 16px
+		line-height: 130%
+		color: #313131
+
+.foot-map
+	position: relative
+	iframe
+		width: 100%
+		height: 320px
+		border: none
+		margin-bottom: -7px
+	&__wrap
+		position: absolute
+		top: 50%
+		transform: translateY( -50% )
+		right: 13%
+		background-color: #fff
+		max-width: 600px
+		padding: 3rem
+	&__wrap-title
+		font-weight: 500
+		font-size: 20px
+		line-height: 140%
+		margin-bottom: 1rem
+	&__wrap-row
+		display: flex
+		align-items: flex-start
+	&__wrap-row-img
+		padding-top: 5px
+		margin-right: .5rem
+	&__wrap-row-text
+		line-height: 130%
+	&__wrap-row-list
+		display: flex
+		flex-direction: column
+	&__wrap-row-list-link
+		color: $text
+		&:hover
+			color: $text
+
+.foot
+	background-color: #2E2B29
+	&__top
+		padding: 2rem 0
+		display: flex
+		align-items: center
+		justify-content: space-between
+		border-bottom: 2px solid #403E3D
+	&__top-logo
+		margin-right: 2rem
+	&__top-list
+		list-style: none
+		padding: 0
+		margin: 0
+		display: flex
+		li
+			margin-left: 2rem
+			&:first-child
+				margin-left: 0
+	&__top-list-row
+		color: #FFF
+		transition: .35s
+		&:hover
+			text-decoration: none
+			color: $accent
+	&__bottom
+		padding: 1rem
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__bottom-left
+		color: #969696
+	&__bottom-center
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 0 30px
+	&__bottom-center-link
+		&:first-child
+			margin-right: .5rem
+	&__bottom-right
+		text-align: right
+		color: #969696
+		transition: .35s
+		&:hover
+			text-decoration: none
+			color: $accent
+	&__bottom-right-accent
+		color: $accent
+
+.cmn-input
+	width: 100%
+	font-size: 18px
+	border: none
+	padding: .8rem 2rem
+	background-color: #ECFFEB
+	border-radius: 2px
+	&::placeholder
+		color: #313131
+		line-height: normal
+
+.input-name
+	background-image: url(../img/form-name.svg)
+	background-repeat: no-repeat
+	background-position: 10px center
+
+.input-phone
+	background-image: url(../img/form-phone.svg)
+	background-repeat: no-repeat
+	background-position: 10px center
+
+.cmn-btn
+	cursor: pointer
+	display: inline-block
+	background-color: $accent
+	border-radius: 2px
+	padding: .8rem 1.8rem
+	font-weight: bold
+	font-size: 18px
+	line-height: 21px
+	text-align: center
+	color: #FFF
+	text-shadow: 1px 2px 4px rgba(69, 151, 1, 0.31)
+	border: 2px solid $accent
+	transition: .35s
+	&:hover
+		text-decoration: none
+		color: #FFF
+		box-shadow: 0px 7px 20px rgba(48, 210, 42, 0.76)
+
+.main-title
+	font-family: "Asket"
+	font-size: 34px
+	text-align: center
+	margin-bottom: 3rem
+	text-transform: uppercase
+.main-subtitle
+	font-family: Roboto
+	font-style: normal
+	font-weight: normal
+	font-size: 18px
+	line-height: 200%
+	text-align: center
+	max-width: 1055px
+	margin: 0 auto 3rem
+.light-title
+	color: #FFF
+
+.container-fluid
+	max-width: 1284px
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.fancyalert
+	max-width: 500px
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+	&-text
+		font-size: 20px
+		font-weight: 500
+		text-align: center
+
+.popup-form
+	max-width: 350px
+	width: 100%
+	&-title
+		text-align: center
+		margin-bottom: 2rem
+		font-size: 28px
+
+.custom-radio
+	display: block
+	position: relative
+	padding-left: 25px
+	cursor: pointer
+	font-size: 18px
+	color: #FFFFFF
+	user-select: none
+	margin-right: 1rem
+.custom-radio input
+	position: absolute
+	opacity: 0
+	cursor: pointer
+.checkmark-radio
+	position: absolute
+	top: 8px
+	left: 0
+	height: 16px
+	width: 16px
+	background-color: transparent
+	border: 1px solid #484848
+	border-radius: 50%
+.custom-radio:hover input ~ .checkmark-radio
+	border: 1px solid $accent
+.custom-radio input:checked ~ .checkmark-radio
+	border: 1px solid $accent
+.checkmark-radio:after
+	content: ""
+	position: absolute
+	display: none
+	display: block
+	top: 3px
+	left: 3px
+	width: 8px
+	height: 8px
+	border-radius: 50%
+	background: #484848
+.custom-radio input:checked ~ .checkmark-radio:after
+	background: $accent
+.buy__row
+	display: flex
+	align-items: center
+.buy__row_price
+	font-family: Roboto, sans-serif
+	font-style: normal
+	font-weight: normal
+	font-size: 24px
+	line-height: 28px
+	color: #fff
+	margin: 0
+	margin-right: 24px
+	span
+		font-family: Roboto
+		font-style: normal
+		font-weight: normal
+		font-size: 40px
+		color: #fff
+@media (max-width: 1260px)
+	.sm-clean a, .sm-clean a:hover, .sm-clean a:focus, .sm-clean a:active, .sm-clean a.highlighted
+		padding: 15px 44px
+
+@media (min-width: 1260px)
+	#main-menu
+		li
+			border-right: 1px solid #403E3D
+			&:first-child
+				border-left: 1px solid #403E3D
+				a
+					padding: 17px 50px
+
+.custom-check
+	display: block
+	position: relative
+	padding-left: 25px
+	cursor: pointer
+	font-size: 18px
+	color: #FFFFFF
+	user-select: none
+	margin-right: 1rem
+.custom-check input
+	position: absolute
+	opacity: 0
+	cursor: pointer
+	height: 0
+	width: 0
+.checkmark-check
+	position: absolute
+	position: absolute
+	top: 8px
+	left: 0
+	height: 16px
+	width: 16px
+	background-color: transparent
+	border: 1px solid #484848
+	border-radius: 50%
+.custom-check:hover input ~ .checkmark-check
+	border: 1px solid $accent
+.custom-check input:checked ~ .checkmark-check
+	border: 1px solid $accent
+.checkmark-check:after
+	content: ""
+	position: absolute
+	display: none
+	display: block
+	top: 3px
+	left: 3px
+	width: 8px
+	height: 8px
+	border-radius: 50%
+	background: #484848
+.custom-check input:checked ~ .checkmark-check:after
+	background: $accent
+.custom-check .checkmark-check:after
+	background: #484848
+
+.head-menu
+	background-color: #2E2B29
+.main-nav
+	background: #2E2B29
+	display: flex
+	justify-content: flex-start
+.main-nav:after
+	clear: both
+	content: "\00a0"
+	display: block
+	height: 0
+	font: 0px/0 serif
+	overflow: hidden
+.nav-brand
+	float: left
+	margin: 0
+	display: block
+	padding: 1rem 0
+#main-menu
+	clear: both
+@media (min-width: 992px)
+	#main-menu
+		float: right
+		clear: none
+.main-menu-btn
+	float: right
+	margin: 6px 10px
+	position: relative
+	display: inline-block
+	width: 29px
+	height: 29px
+	text-indent: 29px
+	margin-top: 20px
+	white-space: nowrap
+	overflow: hidden
+	cursor: pointer
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+.main-menu-btn-icon,
+.main-menu-btn-icon:before,
+.main-menu-btn-icon:after
+	position: absolute
+	top: 50%
+	left: 2px
+	height: 2px
+	width: 24px
+	background: #FFF
+	transition: all 0.25s
+.main-menu-btn-icon:before
+	content: ''
+	top: -7px
+	left: 0
+.main-menu-btn-icon:after
+	content: ''
+	top: 7px
+	left: 0
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon
+	height: 0
+	background: transparent
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:before
+	top: 0
+	transform: rotate(-45deg)
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:after
+	top: 0
+	transform: rotate(45deg)
+#main-menu-state
+	position: absolute
+	width: 1px
+	height: 1px
+	margin: -1px
+	border: 0
+	padding: 0
+	overflow: hidden
+	clip: rect(1px, 1px, 1px, 1px)
+#main-menu-state:not(:checked) ~ #main-menu
+	display: none
+#main-menu-state:checked ~ #main-menu
+	display: block
+@media (min-width: 992px)
+	.main-menu-btn
+		position: absolute
+		top: -99999px
+	#main-menu-state:not(:checked) ~ #main-menu
+		display: block
+
+@import "media" // Always at the end
+
