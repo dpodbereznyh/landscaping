@@ -24,7 +24,7 @@
     font-size: 12px
   .main-frame
     &__wrap-info-title
-      font-size: 28px
+      font-size: 40px
     &__wrap-info-subtitle
       font-size: 18px
       span
@@ -46,7 +46,7 @@
     width: 100%
   .main-frame
     &__wrap-info-title
-      font-size: 22px
+      font-size: 29px
     &__wrap-info-subtitle
       font-size: 14px
       span
@@ -129,6 +129,15 @@
 
 // ≥576px
 +media-breakpoint-down(xs)
+  .projects__swiper-container
+    width: 95%
+  .projects__swiper-button-prev,
+  .projects__swiper-button-next
+    width: 15px
+    height: 35px
+  .projects__swiper-button-prev .icon-prev-arrow,
+  .projects__swiper-button-next .icon-next-arrow
+    font-size: 15px
   .main-frame__advantages-list
     flex-direction: column
   .main-frame__advantages-subitem

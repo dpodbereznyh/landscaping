@@ -6,7 +6,7 @@ require (__DIR__.'/smtp_grid/Exception.php');
 require (__DIR__.'/smtp_grid/PHPMailer.php');
 require (__DIR__.'/smtp_grid/SMTP.php');
 
-$recipient_mail1 = "zakaz@vsedlyasada.com";
+//$recipient_mail1 = "zakaz@vsedlyasada.com";
 
 $mail = new PHPMailer;
 try {
@@ -19,7 +19,7 @@ try {
 	$mail->Port = 465;
 	$mail->setFrom('no-reply@gridstudio.ru'); // Ваш Email
 	$mail->addAddress($recipient_mail1); // Email получателя
-	$mail->addAddress('vsedlyasadagrount@yandex.ru'); // Email получателя
+	$mail->addAddress('pdv@apimedia.ru'); // Email получателя
 }
 
 
@@ -29,7 +29,7 @@ catch (Exception $e) {
 
 
 
-$message = "<h1>Заявка с сайта кора.вседлясада.com</h1>";
+$message = "<h1>Заявка с сайта озеленение.вседлясада.com</h1>";
 if (isset($_POST['name'])) {
 	$message .= "Имя: ".$_POST['name']."<br />";
 }
@@ -70,6 +70,12 @@ if (isset($_POST['input-size-check'])) {
 if (isset($_POST['input-dal'])) {
 	$message .= "Удаленность от города Владимир: ".$_POST['input-dal']."<br />";
 }
+if (isset($_POST['checkedDesign'])) {
+	$message .= "Проектирование систем автополива: ".$_POST['checkedDesign']."<br />";
+}
+if (isset($_POST['checkedService'])) {
+	$message .= "Обслуживание автополива: ".$_POST['checkedService']."<br />";
+}
 
 
 
@@ -77,7 +83,7 @@ if (isset($_POST['input-dal'])) {
 
 // Письмо
 $mail->isHTML(true);
-$mail->Subject = 'Заявка с сайта кора.вседлясада.com'; // Заголовок письма
+$mail->Subject = 'Заявка с сайта озеленение.вседлясада.com'; // Заголовок письма
 $mail->Body = $message; // Текст письма
 $mail->CharSet = "utf-8";
 // Результат

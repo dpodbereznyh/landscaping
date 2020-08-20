@@ -7,7 +7,8 @@
 @import "../libs/menu/sm-clean.css"
 ::placeholder
 	color: #666
-
+main
+	overflow: hidden
 body
 	font-size: 16px
 	min-width: 320px
@@ -267,13 +268,42 @@ body
 		color: #FFFFFF
 		margin-bottom: 2rem
 .swiper-slide-active
-
+	img
+		max-width: 100%
+		width: 100%
+		height: auto
+		display: block
 .swiper-slide-prev
+	position: relative
+	p
+		display: none
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		background: rgba(45, 45, 45, 0.5)
+		width: 100%
+		height: 100%
+		z-index: 9999999
+		top: 0
+		left: 0
 
 .swiper-slide-next
-
+	position: relative
+	p
+		display: none
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		background: rgba(45, 45, 45, 0.5)
+		width: 100%
+		height: 100%
+		z-index: 9999999
+		top: 0
+		left: 0
 .projects
-	margin-bottom: 3rem
+	margin-bottom: 5rem
 	&__slider
 		position: relative
 	&__swiper-slide_description
@@ -288,8 +318,9 @@ body
 		width: 100%
 		height: 100%
 	&__swiper-wrapper
+
 	&__swiper-slide
-		width: 1038px!important
+		width: auto
 		img
 			max-width: 100%
 			width: 100%
@@ -298,7 +329,27 @@ body
 
 
 	&__swiper-pagination
-
+		width: fit-content
+		margin: 40px auto 0
+		display: flex
+		align-items: center
+		span
+			margin-right: 6px
+			&:last-child
+				margin-right: 0
+	&__swiper_bullet
+		width: 13px
+		height: 13px
+		border-radius: 50%
+		background: #C4C4C4
+		display: block
+		&:focus
+			outline: none
+	&__swiper_bullet-active
+		width: 16px
+		height: 16px
+		border-radius: 50%
+		background: #00912C
 	&__swiper-button-prev
 		z-index: 3
 		width: 41px
@@ -548,7 +599,7 @@ body
 		padding: 10px
 		background: linear-gradient( to right, #89DF86 0%, #488D45 76.56%)
 	&__wrap
-		padding: 5rem 4rem
+		padding: 5rem 4rem 2.5rem
 		background-color: #FFF
 
 	&__wrap-info
@@ -567,35 +618,72 @@ body
 		font-size: 20px
 		color: #969696
 		margin-bottom: 2.6rem
-	&__wrap-img
-		position: absolute
-		left: 50%
-		top: 0
-		transform: translate(-50%,-60px)
-		width: 297px
 	&__wrap_label
 		display: flex
 		flex-direction: column
 		margin-bottom: 1.5rem
-	&__manager_image
-		width: fit-content
-		margin-bottom: 10px
+	&__wrap_label_label
+		position: relative
+		display: flex
+		align-items: center
+		font-family: Roboto
+		font-style: normal
+		font-weight: 500
+		font-size: 20px
+		line-height: 140%
+		color: #969696
+		cursor: pointer
+		>.answer__wrap_label_checkbox:checked+.answer__wrap_label_span::after
+			content: ""
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 8px
+			height: 8px
+			border-radius: 50%
+			background: #2CB027
+	&__wrap_label_span
+		min-width: 16px
+		height: 16px
+		border-radius: 50%
+		border: 1px solid #346832
+		margin-right: 5px
+		position: relative
+	&__wrap_label_checkbox
+		position: absolute
+		left: 0
+		visibility: hidden
+	&__wrap-img
+		width: 299px
+		position: relative
+		margin-top: -2.5rem
+		margin-left: auto
 		img
-			width: 254px
+			max-width: 100%
+			width: 100%
 			height: auto
-			display: inline-block
+			display: block
+	&__manager_caption
+		position: absolute
+		bottom: 0
+		left: 0
+		padding-left: 16px
 	&__manager_post
 		font-style: normal
 		font-weight: 300
 		font-size: 16px
-		color: #2E2B29
-		margin-bottom: 0!important
+		line-height: 140%
+		color: #fff
+		//margin-bottom: 0!important
 	&__manager_name
 		font-style: italic
 		font-weight: 500
 		font-size: 18px
-		color: #2E2B29
-		margin-bottom: 0!important
+		line-height: 200%
+		color: #fff
+		//margin-bottom: 0!important
 	&-form-input
 		margin-bottom: 2rem
 	&-form-btn

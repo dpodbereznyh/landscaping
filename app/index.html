@@ -72,9 +72,9 @@
 					<ul id="main-menu" class="sm sm-clean">
 						<li><a href="#yak1" class="yakor">Преимущества</a></li>
 						<li><a href="#yak2" class="yakor">Наша продукция</a></li>
-						<li><a href="#" class="yakor">Отзывы</a></li>
+						<!--<li><a href="#" class="yakor">Отзывы</a></li>-->
 						<li><a href="#yak4" class="yakor">О компании</a></li>
-						<li><a href="#yak3" class="yakor">Наши проекты</a></li>
+						<li><a href="#yak3" class="yakor">Этапы работы</a></li>
 						<li><a href="#foot-map" class="yakor">Контакты</a></li>
 						<li class="d-block d-lg-none"><a href="tel:88003504881">8 800 350 48 81</a></li>
 						<li class="d-block d-lg-none"><a href="#" data-fancybox data-src="#popup-form" class="js-buy" data-title="Заказать обратный звонок" data-input="Заказ обратного звонка с шапки">Обратный звонок</a></li>
@@ -177,7 +177,7 @@
 							<div class="var__wrap-info">
 								<div class="var__wrap-info-title">Живые стены из растений</div>
 								<div class="buy__row">
-									<a href="#" data-fancybox data-src="#popup-form" class="cmn-btn js-buy" data-title="Узнать стоимость" data-input="Узнать стоимость (Живые стены из растений)">Узнать стоимость</a>
+									<a target="_blank" href="#" data-fancybox data-src="#popup-form" class="cmn-btn js-buy" data-title="Узнать стоимость" data-input="Узнать стоимость (Живые стены из растений)">Узнать стоимость</a>
 								</div>
 							</div>
 						</div>
@@ -190,7 +190,7 @@
 			<div class="projects__slider">
 				<div class="swiper-container projects__swiper-container">
 				<!-- Additional required wrapper -->
-				<div class="swiper-wrapper projects__swiper-wrapper">
+				<div class="swiper-wrapper projects__swiper-wrapper ">
 					<!-- Slides -->
 					<div class="swiper-slide projects__swiper-slide">
 						<img src="../img/projects/image1.jpg" alt="Наши проекты">
@@ -236,26 +236,15 @@
 				<div class="swiper-button-next projects__swiper-button-next">
 					<span class="icon-next-arrow"></span>
 				</div>
+				<div class="swiper-pagination projects__swiper-pagination"></div>
 			</div>
 		</div>
-		<!--<div class="advice">-->
-			<!--<div class="container-fluid">-->
-				<!--<div class="main-title">Важный совет</div>-->
-				<!--<p class="main-subtitle">-->
-					<!--Для улучшения мульчирующего эффекта рекомендуется первым слоем отсыпать мелкую кору (фракции 0-3 и 1-3 см) в качестве «подложки», а сверху среднюю или крупную для придания декоративного эффекта.-->
-					<!--Это также поможет сэкономить, так как мелкая кора стоит дешевле.-->
-				<!--</p>-->
-				<!--<div class="advice__bg">-->
-					<!--<img src="../img/advice-bg.jpg" alt="Важный совет">-->
-				<!--</div>-->
-			<!--</div>-->
-		<!--</div>-->
 		<div class="present">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-12 col-md-8">
 						<div class="present__info">
-							<div class="present__info-title">Выгодное предложение</div>
+							<div class="present__info-title">ВЫГОДНОЕ ПРЕДЛОЖЕНИЕ</div>
 							<div class="present__info-subtitle">
 								Бесплатный проект на озеленение
 							</div>
@@ -374,33 +363,36 @@
 				<div class="answer-border">
 					<div class="answer__wrap">
 						<div class="row">
-							<div class="col-12 col-xl-9">
+							<div class="col-12 col-xl-8">
 								<div class="answer__wrap-info">
 									<div class="answer__wrap-info-title">консультация эксперта</div>
-                                    <div class="answer__wrap_label">
-                                        <label class="answer__wrap_label_label">
-                                            <input class="answer__wrap_label_checkbox" type="checkbox" name="design" value="Проектирование систем автополива">
-                                            Проектирование систем автополива
-                                        </label>
-                                        <label class="answer__wrap_label_label">
-                                            <input class="answer__wrap_label_checkbox" type="checkbox" name="design" value="Проектирование систем автополива">
-                                            Проектирование систем автополива
-                                        </label>
-                                    </div>
+
 									<form id="answer-form">
+										<div class="answer__wrap_label">
+											<label class="answer__wrap_label_label">
+												<input class="answer__wrap_label_checkbox" type="checkbox" name="checkedDesign" value="">
+												<span class="answer__wrap_label_span"></span>
+												Проектирование систем автополива
+											</label>
+											<label class="answer__wrap_label_label">
+												<input class="answer__wrap_label_checkbox" type="checkbox" name="checkedService" value="">
+												<span class="answer__wrap_label_span"></span>
+												Обслуживание автополива
+											</label>
+										</div>
 										<div class="row">
 											<div class="col-12 col-sm-5">
 												<div class="answer-form-input">
-													<input type="hidden" value="Заявка в блоке ответим на ваши вопросы" name="title" required="">
-													<input type="text" name="name" placeholder="Ваше имя" required="" class="cmn-input input-name">
+													<input type="hidden" value="Заявка в блоке (Консультация эксперта)" name="title" required="">
+													<input type="text" name="name" placeholder="Ваше имя" class="cmn-input input-name" required="">
 												</div>
 											</div>
 											<div class="col-12 col-sm-5">
 												<div class="answer-form-input">
-													<input type="tel" name="phone" placeholder="Телефон" required="" class="cmn-input input-phone">
+													<input type="tel" name="phone" placeholder="Телефон" class="cmn-input input-phone" required="">
 												</div>
 											</div>
-											<div class="col-12">
+											<div class="col-11">
 												<div class="answer-form-btn">
 													<button class="cmn-btn">Отправить заявку</button>
 													<div class="answer-form-btn-text">Нажимая на кнопку, вы принимаете<br>условия <a href="/politic.pdf" class="answer-form-btn-text-link" target="_blank">передачи данных</a></div>
@@ -413,12 +405,14 @@
 							<div class="col-12 col-sm-3 d-none d-xl-block">
 								<div class="answer__wrap-img">
 									<img src="../img/manager.jpg" alt="" class="answer__manager_image">
-									<p class="answer__manager_post">
-										Руководитель отдела продаж
-									</p>
-									<p class="answer__manager_name">
-										Кобышев Никита Александрович
-									</p>
+									<div class="answer__manager_caption" >
+                                        <p class="answer__manager_post">
+                                            Руководитель отдела внутреннего<br>и внешнего озеленения
+                                        </p>
+                                        <p class="answer__manager_name">
+                                            Станислав Кузнецов
+                                        </p>
+                                    </div>
 								</div>
 							</div>
 						</div>
@@ -482,14 +476,14 @@ VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
 					<ul class="foot__top-list">
 						<li><a href="#yak1" class="foot__top-list-row yakor">Преимущества</a></li>
 						<li><a href="#yak2" class="foot__top-list-row yakor">Наша продукция</a></li>
-						<li><a href="#" class="foot__top-list-row yakor">Отзывы</a></li>
+						<!--<li><a href="#" class="foot__top-list-row yakor">Отзывы</a></li>-->
 						<li><a href="#yak4" class="foot__top-list-row yakor">О компании</a></li>
 						<li><a href="#yak3" class="foot__top-list-row yakor">Этапы работы</a></li>
 						<li><a href="#foot-map" class="foot__top-list-row yakor">Контакты</a></li>
 					</ul>
 				</div>
 				<div class="foot__bottom">
-					<div class="foot__bottom-left">© 2020 Кора «Все для сада.ком», все права защищены</div>
+					<div class="foot__bottom-left">© 2020 Озеленение «Все для сада.ком», все права защищены</div>
 					<div class="foot__bottom-center">
 						<a href="https://vk.com/sila.suzdalya" class="foot__bottom-center-link" target="_blank"><img src="../img/foot-vk.svg" alt=""></a>
 						<a href="https://www.instagram.com/club_sila_syzdalya/" class="foot__bottom-center-link" target="_blank"><img src="../img/foot-inst.svg" alt=""></a>
@@ -503,11 +497,11 @@ VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
 			<form id="popup-form">
 				<div class="popup-form">
 					<h2 class="popup-form-title js-title mb-5">Заказать обратный звонок</h2>
-					<input class="cmn-input mb-4 js-zakaz" type="hidden" value="Всплывающая форма (Кора Дуба)" name="title" required="">
+					<input class="cmn-input mb-4 js-zakaz" type="hidden" value="Всплывающая форма" name="title" required="">
 					<input class="cmn-input mb-4" type="text" placeholder="Ваше имя" name="name" required="">
 					<input class="cmn-input mb-4" type="tel" placeholder="Ваш телефон" name="phone" required="">
 					<div class="d-flex justify-content-center mt-4">
-						<button class="cmn-btn form-btn">Отправить</button>
+						<button type="submit" class="cmn-btn form-btn">Отправить</button>
 					</div>
 				</div>
 			</form>

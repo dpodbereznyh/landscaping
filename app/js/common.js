@@ -4,8 +4,7 @@ $(function() {
     var projectsSlider = new Swiper ('.projects__swiper-container', {
         slideClass: 'projects__swiper-slide',
         wrapperClass: 'projects__swiper-wrapper',
-        slidesPerView: 3,
-        freeMode: true,
+        slidesPerView: 1,
         loop: true,
         centeredSlides: true,
         spaceBetween: 32,
@@ -13,24 +12,20 @@ $(function() {
             nextEl: '.projects__swiper-button-next',
             prevEl: '.projects__swiper-button-prev',
         },
-        // pagination: {
-        //     el: '.projects__swiper-pagination',
-        //     type: 'bullets',
-        // },
-        // navigation: {
-        //     nextEl: '.swiper-button-next',
-        //     prevEl: '.swiper-button-prev',
-        // },
-        // breakpoints: {
-        //     320: {
-        //         slidesPerView: 1,
-        //         spaceBetween: 10
-        //     },
-        //     770: {
-        //         slidesPerView: 3,
-        //         spaceBetween: 10
-        //     }
-        // }
+        pagination: {
+            el: '.projects__swiper-pagination',
+            type: 'bullets',
+            bulletClass: 'projects__swiper_bullet',
+            bulletActiveClass: 'projects__swiper_bullet-active',
+            clickable: true,
+        },
+
+        breakpoints: {
+            1060: {
+                slidesPerView: 1.6/1,
+                spaceBetween: 10
+            }
+        }
     });
 
 });
@@ -76,7 +71,19 @@ $(".js-buy").on( "click", function() {
 });
 
 
+$(".answer__wrap_label_checkbox").on("click", function () {
+    if ($('input[name=checkedDesign]').prop('checked')) {
+        $('input[name=checkedDesign]').val('Выбрано');
+    } else {
+        $('input[name=checkedDesign]').val('Не выбрано');
+    };
+    if ($('input[name=checkedService]').prop('checked')) {
+        $('input[name=checkedService]').val('Выбрано');
+    } else {
+        $('input[name=checkedService]').val('Не выбрано');
+    }
 
+});
 $("#answer-form").submit(function(){
     $.ajax({
         type: "POST",
@@ -192,7 +199,7 @@ $(document).ready(function() {
             };
         };
 
-        if ($('input[name=gazon-input-height-check').prop('checked')) {
+        if ($('input[name=gazon-input-height-check]').prop('checked')) {
             height = "Не знаю";
         } else {
             if ($('input[name=gazon-input-height]').val() != "") {
